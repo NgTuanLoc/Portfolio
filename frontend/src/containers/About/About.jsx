@@ -1,32 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { about01, about02, about03, about04 } from '../../constants/images';
 import { urlFor, client } from '../../client';
 
 import './About.scss';
-
-// const abouts = [
-//   {
-//     title: 'Web Development',
-//     description: 'I am a good Web Developer',
-//     imgUrl: about01,
-//   },
-//   {
-//     title: 'Frontend Development',
-//     description: 'I am a good Web Developer',
-//     imgUrl: about02,
-//   },
-//   {
-//     title: 'Backend Developement',
-//     description: 'I am a good Web Developer',
-//     imgUrl: about03,
-//   },
-//   {
-//     title: 'MERN Stack',
-//     description: 'I am a good Web Developer',
-//     imgUrl: about04,
-//   },
-// ];
+import { AppWrap } from '../../wrapper';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -40,8 +17,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I know that <span>Good Development</span><br /> means{' '}
-        <span>Good Business</span>
+        I know that <span>Good Development</span>
+        <br /> means <span>Good Business</span>
       </h2>
 
       <div className="app__profiles">
@@ -68,4 +45,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, 'about');
